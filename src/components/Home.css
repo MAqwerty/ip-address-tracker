@@ -1,0 +1,260 @@
+.header-Home{
+    width: 100%;
+    height: 33vh;
+    background-image: url(./../assets/images/pattern-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    position: relative;
+}
+
+.h1-header{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.form-Home{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.form-input-Address{
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-size: 1.5em;
+    border-radius: 20px 0 0 20px;
+}
+
+.form-input-Address::placeholder{
+    color: rgb(125, 125, 125);
+}
+
+.form-button-Address{
+    width: 15%;
+    height: 60px;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius:  0 20px 20px 0 ;
+    cursor: pointer;
+}
+
+.form-button-Address:hover{
+    background-color: rgb(55, 55, 55);
+}
+
+.button-Address-disabled{
+    animation: NTavailable .75s linear;
+    background-color: rgb(125, 0, 0);
+}
+
+.main-Home{
+    width: 100%;
+    height: 67vh;
+    background-color: rgb(36, 36, 36);
+}
+
+.article-Home{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 67%;
+    height: 110px;
+    padding: 25px;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;    
+    position: absolute;
+    top: 200px;
+    z-index: 1;
+}
+
+.divCLASS{
+    width: 22%;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(127, 127, 127, 0.7) ;
+}
+
+.article-div-4 {
+    border: none;
+}
+
+p{
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+h2{
+    margin-top: 10px;
+    overflow-wrap: break-word;
+}
+
+.leaflet-container{
+    width: 100%;
+    height: 67vh;
+    z-index: 0;
+}
+   
+.ISloading{
+    background-image: url(./../assets/images/Infinity-1s-200px.svg);
+    width: 100px;   
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.NOTavailable{
+    animation: NTavailable .75s linear;
+    background-color: rgba(255, 0, 0, 0.3);
+    color: black;
+}
+
+.NOTavailable::placeholder{
+    color: rgb(255, 0, 0);
+}
+
+.leaflet-control-zoom-in{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: rgb(222, 222, 222) !important;
+    background-color: rgb(0, 0, 0) !important ;
+    font-family: Rubik,sans-serif !important ;
+    border: solid blue 2px;
+}
+
+.leaflet-control-zoom-out{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: rgb(222, 222, 222) !important;
+    background-color: rgb(0, 0, 0) !important ;
+    font-family: Rubik,sans-serif !important ;
+    border: solid red 2px;
+}
+
+.leaflet-control-zoom{
+    box-shadow: black 0px 0px 33px !important;
+}
+
+@keyframes NTavailable {
+    0%{
+        background-color: white;
+    }
+    25%{
+        background-color: rgba(255, 40, 0, 0.5);
+    }
+    50%{
+        background-color: white;
+    }
+    75%{
+        background-color: rgba(255, 40, 0, 0.5);
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width:1250px){
+    .form-Home{
+        width: 60%;
+    }
+    h2{
+        font-size: 1.25em;
+    }
+}
+
+@media only screen and (max-width:850px){
+    .form-Home{
+        width: 63%;
+    }
+    .divCLASS{
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin-top: 10PX;
+    }
+    .article-Home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 60%;
+        height: min-content;
+    }
+    h2{
+        margin-top: 0px;
+    }
+    .form-input-Address{
+        font-size: 1.25em;
+    }
+}
+
+@media only screen and (max-width:650px){
+    .form-Home{
+        width: 75%;
+    } 
+    .article-Home{
+        width: 65%;
+    }
+    .form-input-Address{
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width:550px){
+    .form-Home{
+        width: 85%;
+    } 
+    .article-Home{
+        width: 55%;
+        top: 190px;
+    }
+    .form-input-Address{
+        font-size: 1.1em;
+        padding-left: 10px;
+        height: 50px;
+    }
+    .form-button-Address{
+        height: 50px;
+    }
+    h2{
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .form-Home{
+        width: 90%;
+    } 
+    .article-Home{
+        width: 55%;
+        margin-left: 50px;
+    }
+    .form-input-Address{
+        font-size: 1em;
+        padding-left: 7px;
+        height: 40px;
+    }
+    .form-button-Address{
+        height: 40px;
+    }
+}
