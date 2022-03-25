@@ -44,7 +44,7 @@ const Home = () => {
   const GETdata = async () => {
     setloading(true)
 
-    const response = await axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=at_RswWxBV7vPXfaOdZPKN8thQap3l5w&ipAddress=${ipAddress}`);
+    const response = await axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=at_bzImtDM1aeuN9HVVDyWg0R4GamFUZ&ipAddress=${ipAddress}`);
     console.log(response)
     setipAddressGET(response.data.ip,setloading(false)) 
     setcountryGET(response.data.location.country,setloading(false))
@@ -61,7 +61,7 @@ const Home = () => {
   // ...........................Set default information........................//
     useEffect(() => {
       window.onload = async () => {
-        const hello = await axios.get("https://geo.ipify.org/api/v2/country,city?apiKey=at_RswWxBV7vPXfaOdZPKN8thQap3l5w&ipAddress");
+        const hello = await axios.get("https://geo.ipify.org/api/v2/country,city?apiKey=at_bzImtDM1aeuN9HVVDyWg0R4GamFUZ&ipAddress");
 
         setloading(true)
 
